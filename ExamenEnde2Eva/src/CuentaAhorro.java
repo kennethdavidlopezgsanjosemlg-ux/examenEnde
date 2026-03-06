@@ -1,15 +1,15 @@
 
 public class CuentaAhorro extends CuentaBancaria {
-	private double comision;
+	private double interes;
 
 	public CuentaAhorro(String titular, double saldoInicial,double interes) {
 		super(titular, saldoInicial);
-		this.comision=comision;
+		this.interes=interes;
 		
 	}
 	
-	public double calcularInteres(int interes) {
-		double interesCobrado = this.saldo * interes;
+	public int calcularInteres() {
+		int interesCobrado = (int) (this.saldo * interes);
 		
 		return interesCobrado;
 	}
